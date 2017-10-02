@@ -4,8 +4,19 @@
 	{% load staticfiles %}
 	<title>DjangoTodo</title>
 </head>
-<body>
-	<p>Boddy</p>
+<body ng-app="toDo" ng-controller="toDoController">
+	<form ng-submit="todoAdd()">
+		<input type="text" name="" ng-model="todoInput" placeholder="Add a new To Do...">
+		<input type="submit" value="submit">
+	</form>
+	<br>
+	<div ng-repeat="todo in todoList">
+		<input type="checkbox" name="" ng-model="todo.done"><span ng-bind="todo.todoText"></span>
+	</div>
+	<p>
+		<button ng-click="remove()">Done</button>
+	</p>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 <script src="{% static 'js/todo.js' %}"></script>
 </html>
