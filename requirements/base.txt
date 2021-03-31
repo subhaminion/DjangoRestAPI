@@ -7,7 +7,7 @@ f.lux-indicator-applet==1.1.11rc0
 gyp==0.1
 html5lib==0.999
 idna==2.6
-lxml==3.5.0
+lxml==4.6.3
 pexpect==4.0.1
 ptyprocess==0.5
 pygobject==3.20.0
